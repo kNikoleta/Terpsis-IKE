@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terpsis IKE</title>
-    <meta name="description" content="Terpsis IKE - Basic company info: administrator, partners, shares, addresses, and headquarters.">
+    <title>ΤΕΡΨΙΣ Ι.Κ.Ε. - Επίσημα Στοιχεία Εταιρείας</title>
+    <meta name="description" content="Επίσημα στοιχεία και βασικοί δείκτες της εταιρείας ΤΕΡΨΙΣ Ι.Κ.Ε., ΑΦΜ 801313888, ΝΕΑΡΧΟΥ 13, ΧΑΝΙΑ.">
     <style>
+        /* Υπάρχοντα Στυλ */
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
             line-height: 1.6;
@@ -17,56 +18,173 @@
         }
         h1 {
             color: #2c3e50;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
+            font-size: 2.5em;
         }
-        h2, h3 {
+        h2 {
             color: #34495e;
             margin-top: 30px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 5px;
         }
         p {
-            font-size: 18px;
+            font-size: 16px;
             margin: 5px 0;
+        }
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .header-info p {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #e74c3c;
         }
         .section {
             background-color: #fff;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 40px;
+        }
+        .metric-box {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .metric-box strong {
+            display: block;
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .metric-box.turnover strong { color: #27ae60; }
+        .metric-box.result strong { color: #c0392b; }
+        .data-point {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dotted #ccc;
+            padding: 8px 0;
+        }
+        .data-point span:first-child {
+            font-weight: bold;
+            color: #555;
+        }
+        /* ΝΕΑ ΣΤΥΛ ΓΙΑ ΤΟ ΚΕΦΑΛΑΙΟ */
+        .capital-card {
+            background-color: #e6f0fa; /* Light blue background */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .capital-value {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #007bff; /* Blue color for capital */
+            margin-bottom: 5px;
+        }
+        .stock-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .stock-box {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .stock-box span {
+            display: block;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .total-stock-value {
+            text-align: right;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 2px dashed #ccc;
+            color: #2c3e50;
         }
     </style>
 </head>
 <body>
-    <h1>Terpsis IKE</h1>
+    <h1>ΤΕΡΨΙΣ Ι.Κ.Ε.</h1>
 
-    <div class="section">
-        <h2>Διαχειριστής</h2>
-        <p>Κοπάσης Ελευθέριος</p>
+    <div class="header-info">
+        <p>Κατάσταση: <span style="color: #27ae60;">Ενεργή</span></p>
+        <p>ΑΦΜ: 801313888</p>
     </div>
 
     <div class="section">
-        <h2>Εταίροι</h2>
-        <p>Κοπάσης Ελευθέριος</p>
-        <p>Παπαδοπέτρου Ιωάννα</p>
+        <h2>💰 Μετοχικό Κεφάλαιο & Κατανομή Μετοχών</h2>
+
+        <h3>Μετοχικό Κεφάλαιο</h3>
+        <div class="capital-card">
+            <div class="capital-value">€240.250 <span style="font-size: 0.5em; font-weight: normal; color: #555;">(EUR)</span></div>
+            <p>Συνολικό Κεφάλαιο</p>
+        </div>
+
+        <h3>Κατανομή Μετοχών</h3>
+        <div class="stock-info">
+            <div class="stock-box">
+                Σύνολο Μετοχών
+                <span>24.025</span>
+            </div>
+            <div class="stock-box">
+                Τύπος Μετοχών
+                <span>1</span>
+            </div>
+            <div class="stock-box">
+                Ονομαστική Αξία
+                <span>€10</span>
+            </div>
+        </div>
+        <p class="total-stock-value">Συνολική Αξία Μετοχών: €240.250</p>
+    </div>
+    
+
+    <div class="section">
+        <h2>📜 Στοιχεία Εταιρείας</h2>
+        <div class="grid-container">
+            <div class="data-point"><span>Νομική Μορφή</span><span>ΙΚΕ</span></div>
+            <div class="data-point"><span>Μητρώο ΓΕΜΗ</span><span>154184258000</span></div>
+            <div class="data-point"><span>Διεύθυνση</span><span>ΝΕΑΡΧΟΥ 13, ΧΑΝΙΑ 73100</span></div>
+            <div class="data-point"><span>Γραφείο ΓΕΜΗ</span><span>ΕΠΙΜΕΛΗΤΗΡΙΟ ΧΑΝΙΩΝ</span></div>
+            <div class="data-point"><span>Ημερομηνία Σύστασης</span><span>24/2/2020</span></div>
+            <div class="data-point"><span>Αγγλικός Τίτλος</span><span>TERPSIS P.C.</span></div>
+        </div>
+        
+        <h3>Κύρια Δραστηριότητα (ΚΑΔ)</h3>
+        <p style="font-size: 0.9em;">**41202001:** ΕΡΓΑΣΙΕΣ ΔΙΑΜΟΡΦΩΣΗΣ Η ΑΝΕΓΕΡΣΗΣ ΚΤΙΣΜΑΤΟΣ Η ΑΛΛΟΥ ΕΙΔΟΥΣ ΚΑΤΑΣΚΕΥΩΝ (ΩΣ ΑΓΑΘΟΥ ΕΠΕΝΔΥΣΗΣ ΤΟΥ ΑΡΘΡ. 33 ΠΑΡ. 4 ΤΟΥ ΚΩΔΙΚΑ ΦΠΑ) ΓΙΑ ΙΔΙΑ ΑΣΚΗΣΗ ΕΠΑΓΓΕΛΜΑΤΙΚΗΣ ΔΡΑΣΤΗΡΙΟΤΗΤΑΣ ΜΕ ΔΙΚΑΙΩΜΑ ΕΚΠΤΩΣΗΣ ΤΟΥ ΦΠΑ ΤΩΝ ΕΙΣΡΟΩΝ ΤΟΥΣ</p>
     </div>
 
     <div class="section">
-        <h2>Μερίδια</h2>
-        <p>80% Κοπάσης Ελευθέριος</p>
-        <p>20% Παπαδοπέτρου Ιωάννα</p>
+        <h2>👥 Βασικά Πρόσωπα</h2>
+        <div class="data-point"><span>ΕΛΕΥΘΕΡΙΟΣ ΚΟΠΑΣΗΣ</span><span>Μέλος & Διαχειριστής</span></div>
+        <div class="data-point"><span>ΙΩΑΝΝΑ ΠΑΠΑΔΟΠΕΤΡΟΥ</span><span>Εταίρος - Μέλος</span></div>
     </div>
 
-    <div class="section">
-        <h2>Διευθύνσεις</h2>
-        <p>Άννας Κοντογιάννη 2</p>
-        <p>Νεάρχου 13</p>
-    </div>
-
-    <div class="section">
-        <h2>Έδρα</h2>
-        <p>Νεάρχου 13, 73132</p>
-    </div>
-
+   
 </body>
 </html>
