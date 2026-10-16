@@ -1,190 +1,109 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ΤΕΡΨΙΣ Ι.Κ.Ε. - Επίσημα Στοιχεία Εταιρείας</title>
-    <meta name="description" content="Επίσημα στοιχεία και βασικοί δείκτες της εταιρείας ΤΕΡΨΙΣ Ι.Κ.Ε., ΑΦΜ 801313888, ΝΕΑΡΧΟΥ 13, ΧΑΝΙΑ.">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.6;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 5px;
-            font-size: 2.5em;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #34495e;
-            margin-top: 20px;
-            margin-bottom: 5px;
-        }
-        p {
-            font-size: 16px;
-            margin: 5px 0;
-        }
-        .header-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        .header-info p {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #e74c3c;
-        }
-        .section {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px 40px;
-        }
-        .metric-box {
-            background-color: #ecf0f1;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 1.2em;
-        }
-        .metric-box strong {
-            display: block;
-            font-size: 1.8em;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-        .metric-box.turnover strong { color: #27ae60; }
-        .metric-box.result strong { color: #c0392b; }
-        .data-point {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px dotted #ccc;
-            padding: 8px 0;
-        }
-        .data-point span:first-child {
-            font-weight: bold;
-            color: #555;
-        }
-        /* ΝΕΑ ΣΤΥΛ ΓΙΑ ΤΟ ΚΕΦΑΛΑΙΟ */
-        .capital-card {
-            background-color: #e6f0fa; /* Light blue background */
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-        .capital-value {
-            font-size: 2.2em;
-            font-weight: bold;
-            color: #007bff; /* Blue color for capital */
-            margin-bottom: 5px;
-        }
-        .stock-info {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            text-align: center;
-            margin-top: 15px;
-        }
-        .stock-box {
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        .stock-box span {
-            display: block;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #3498db;
-        }
-        .total-stock-value {
-            text-align: right;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-top: 20px;
-            padding-top: 10px;
-            border-top: 2px dashed #ccc;
-            color: #2c3e50;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Εταιρικά και νομικά στοιχεία της ΤΕΡΨΙΣ Ι.Κ.Ε., ΑΦΜ 801313888, Νεάρχου 13, Χανιά.">
+  <title>ΤΕΡΨΙΣ Ι.Κ.Ε. | Εταιρικό Προφίλ</title>
+  <style>
+    :root { --navy:#14243a; --navy-soft:#415066; --ink:#17263b; --muted:#7c8797; --line:#e7eaf0; --surface:#fff; --bg:#f5f6f8; --gold:#c5aa78; }
+    * {box-sizing:border-box}
+    body {margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.5}
+    .page {max-width:1024px;padding:36px 22px;margin:0 auto}
+    .hero {background:var(--navy);color:#fff;border-radius:16px;padding:42px 40px}
+    .eyebrow {font-size:11px;letter-spacing:.22em;color:var(--gold);font-weight:700;text-transform:uppercase}
+    .hero-title-row {display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    h1 {font-size:clamp(32px,5vw,49px);line-height:1.15;letter-spacing:-.035em;font-weight:650;margin:14px 0 8px}
+    .hero-sub {font-size:14px;color:#b9c4d3;margin:0}
+    .status {display:inline-flex;align-items:center;gap:8px;border:1px solid #3d6158;border-radius:24px;padding:7px 13px;font-size:12px;color:#bce4d2;white-space:nowrap}
+    .status-dot {height:8px;width:8px;border-radius:50%;background:#75cba5}
+    .hero-rule {border:0;border-top:1px solid var(--navy-soft);margin:29px 0 24px}
+    .hero-meta {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .hero-label {font-size:11px;color:#a4b1c3;margin-bottom:7px}
+    .hero-value {font-size:15px;font-weight:550;letter-spacing:.02em;overflow-wrap:anywhere}
+    .section {background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:28px;margin-top:20px}
+    h2 {font-size:19px;letter-spacing:-.02em;margin:0 0 25px;font-weight:650}
+    .micro {font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+    .capital-amount {font-size:clamp(32px,5vw,43px);font-weight:650;letter-spacing:-.045em;margin:6px 0 0;line-height:1.25}
+    .rule {border:0;border-top:1px solid #edf0f3;margin:27px 0 23px}
+    .stats {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+    .stat {background:#f7f8fa;border:1px solid #edf0f3;border-radius:9px;padding:20px}
+    .stat-label {font-size:12px;color:var(--muted)}
+    .stat-value {font-size:clamp(18px,2.7vw,25px);font-weight:650;margin-top:10px;letter-spacing:-.025em;overflow-wrap:anywhere}
+    .details {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+    .detail {display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid #eef0f3;padding:15px 0;font-size:13px}
+    .detail span:first-child {color:var(--muted)}
+    .detail span:last-child {font-weight:550;text-align:right}
+    .activity {background:#f7f8fa;border-radius:9px;padding:21px;margin-top:23px}
+    .activity-head {font-size:13px;font-weight:650;margin-bottom:8px}
+    .activity-code {color:var(--muted);font-weight:400}
+    .activity p {font-size:13px;color:#667487;line-height:1.85;margin:0}
+    .people {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+    .person {display:flex;align-items:center;gap:14px;padding:18px;border:1px solid #edf0f3;border-radius:9px}
+    .avatar {height:42px;width:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:50%;background:#edf0f5;color:#51647c;font-weight:650;font-size:12px}
+    .person-name {font-size:14px;font-weight:650}
+    .person-role {font-size:12px;color:var(--muted);margin-top:3px}
+    footer {display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#8b95a2;font-size:11px;padding:27px 4px}
+    @media(max-width:640px){.page{padding:16px}.hero{padding:29px 24px}.section{padding:22px}.stats,.details,.people{grid-template-columns:1fr}.detail{display:block}.detail span{display:block}.detail span:last-child{text-align:left;margin-top:5px}.stat{padding:18px}.hero-meta{gap:16px}}
+  </style>
 </head>
 <body>
-    <h1>ΤΕΡΨΙΣ Ι.Κ.Ε.</h1>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">Εταιρικό προφίλ</div>
+      <div class="hero-title-row">
+        <h1>ΤΕΡΨΙΣ Ι.Κ.Ε.</h1>
+        <div class="status"><span class="status-dot" aria-hidden="true"></span>Ενεργή εταιρεία</div>
+      </div>
+      <p class="hero-sub">TERPSIS P.C. · Χανιά, Κρήτη</p>
+      <hr class="hero-rule">
+      <div class="hero-meta">
+        <div><div class="hero-label">Αριθμός Γ.Ε.ΜΗ.</div><div class="hero-value">154184258000</div></div>
+        <div><div class="hero-label">Α.Φ.Μ.</div><div class="hero-value">801313888</div></div>
+      </div>
+    </header>
 
-    <div class="header-info">
-        <p>Κατάσταση: <span style="color: #27ae60;">Ενεργή</span></p>
-        <p>ΑΦΜ: 801313888</p>
-    </div>
+    <section class="section" aria-labelledby="capital-heading">
+      <h2 id="capital-heading">Εταιρικό κεφάλαιο</h2>
+      <div class="micro">Συνολικό εταιρικό κεφάλαιο</div>
+      <div class="capital-amount">405.250,00 €</div>
+      <hr class="rule">
+      <div class="stats">
+        <div class="stat"><div class="stat-label">Εταιρικά μερίδια</div><div class="stat-value">40.525</div></div>
+        <div class="stat"><div class="stat-label">Ονομαστική αξία</div><div class="stat-value">10,00 €</div></div>
+        <div class="stat"><div class="stat-label">Κατηγορία μεριδίων</div><div class="stat-value">Κεφαλαιακά</div></div>
+      </div>
+    </section>
 
-    <div class="section">
-        <h2>Μετοχικό Κεφάλαιο</h2>
-
-        <h3>Εταιρικό Κεφάλαιο</h3>
-        <div class="capital-card">
-            <div class="capital-value">€405,250 <span style="font-size: 0.5em; font-weight: normal; color: #555;">(EUR)</span></div>
-            <!-- <p>Συνολικό Κεφάλαιο</p> -->
-        </div>
-        <h3>Σύνολο Μετοχών</h3>
-        <div class="capital-card">
-            <div class="capital-value"> 40,525</div>
-           
-        </div>
-
-       <h3>Ονομαστική Αξία</h3>
-        <div class="capital-card">
-            <div class="capital-value"> €10 <span style="font-size: 0.5em; font-weight: normal; color: #555;">(EUR)</span></div>
-        </div>
-         <h3>Τύποι Μετοχών</h3>
-        <div class="capital-card">
-            <div class="capital-value">  <span style="font-size: 0.5em; font-weight: normal; color: #555;">1 · Κεφαλαιικές
+    <section class="section" aria-labelledby="company-heading">
+      <h2 id="company-heading">Στοιχεία εταιρείας</h2>
+      <div class="details">
+        <div>
+          <div class="detail"><span>Επωνυμία</span><span>ΤΕΡΨΙΣ Ι.Κ.Ε.</span></div>
+          <div class="detail"><span>Νομική μορφή</span><span>ΙΚΕ
 </span></div>
+          <div class="detail"><span>Ημερομηνία σύστασης</span><span>24 Φεβρουαρίου 2020</span></div>
         </div>
-
-        
-    </div>
-    
-
-    <div class="section">
-        <h2>📜 Στοιχεία Εταιρείας</h2>
-        <div class="grid-container">
-            <div class="data-point"><span>Νομική Μορφή</span><span>ΙΚΕ</span></div>
-            <div class="data-point"><span>Μητρώο ΓΕΜΗ</span><span>154184258000</span></div>
-            <div class="data-point"><span>Διεύθυνση</span><span>ΝΕΑΡΧΟΥ 13, ΧΑΝΙΑ 73100</span></div>
-            <div class="data-point"><span>Γραφείο ΓΕΜΗ</span><span>ΕΠΙΜΕΛΗΤΗΡΙΟ ΧΑΝΙΩΝ</span></div>
-            <div class="data-point"><span>Ημερομηνία Σύστασης</span><span>24/2/2020</span></div>
-            <div class="data-point"><span>Αγγλικός Τίτλος</span><span>TERPSIS P.C.</span></div>
+        <div>
+          <div class="detail"><span>Έδρα</span><span>ΝΕΑΡΧΟΥ 13, ΧΑΝΙΑ 73100</span></div>
+          <div class="detail"><span>Υπηρεσία Γ.Ε.ΜΗ.</span><span>ΕΠΙΜΕΛΗΤΗΡΙΟ ΧΑΝΙΩΝ</span></div>
+          <div class="detail"><span>Αγγλική επωνυμία</span><span>TERPSIS P.C.</span></div>
         </div>
-        
-        <h3>Κύρια Δραστηριότητα (ΚΑΔ)</h3>
-        <p style="font-size: 0.9em;">41202001: ΕΡΓΑΣΙΕΣ ΔΙΑΜΟΡΦΩΣΗΣ Η ΑΝΕΓΕΡΣΗΣ ΚΤΙΣΜΑΤΟΣ Η ΑΛΛΟΥ ΕΙΔΟΥΣ ΚΑΤΑΣΚΕΥΩΝ (ΩΣ ΑΓΑΘΟΥ ΕΠΕΝΔΥΣΗΣ ΤΟΥ ΑΡΘΡ. 33 ΠΑΡ. 4 ΤΟΥ ΚΩΔΙΚΑ ΦΠΑ) ΓΙΑ ΙΔΙΑ ΑΣΚΗΣΗ ΕΠΑΓΓΕΛΜΑΤΙΚΗΣ ΔΡΑΣΤΗΡΙΟΤΗΤΑΣ ΜΕ ΔΙΚΑΙΩΜΑ ΕΚΠΤΩΣΗΣ ΤΟΥ ΦΠΑ ΤΩΝ ΕΙΣΡΟΩΝ ΤΟΥΣ</p>
-    </div>
+      </div>
+      <div class="activity">
+        <div class="activity-head">Κύρια δραστηριότητα <span class="activity-code">· ΚΑΔ 41202001</span></div>
+        <p>ΕΡΓΑΣΙΕΣ ΔΙΑΜΟΡΦΩΣΗΣ Η ΑΝΕΓΕΡΣΗΣ ΚΤΙΣΜΑΤΟΣ Η ΑΛΛΟΥ ΕΙΔΟΥΣ ΚΑΤΑΣΚΕΥΩΝ (ΩΣ ΑΓΑΘΟΥ ΕΠΕΝΔΥΣΗΣ ΤΟΥ ΑΡΘΡ. 33 ΠΑΡ. 4 ΤΟΥ ΚΩΔΙΚΑ ΦΠΑ) ΓΙΑ ΙΔΙΑ ΑΣΚΗΣΗ ΕΠΑΓΓΕΛΜΑΤΙΚΗΣ ΔΡΑΣΤΗΡΙΟΤΗΤΑΣ ΜΕ ΔΙΚΑΙΩΜΑ ΕΚΠΤΩΣΗΣ ΤΟΥ ΦΠΑ ΤΩΝ ΕΙΣΡΟΩΝ ΤΟΥΣ</p>
+      </div>
+    </section>
 
-    <div class="section">
-        <h2>👥 Βασικά Πρόσωπα</h2>
-        <div class="data-point"><span>ΕΛΕΥΘΕΡΙΟΣ ΚΟΠΑΣΗΣ</span><span>Μέλος & Διαχειριστής</span></div>
-        <div class="data-point"><span>ΙΩΑΝΝΑ ΠΑΠΑΔΟΠΕΤΡΟΥ</span><span>Εταίρος - Μέλος</span></div>
-    </div>
-
-   
+    <section class="section" aria-labelledby="people-heading">
+      <h2 id="people-heading">Βασικά Πρόσωπα</h2>
+      <div class="people">
+        <div class="person"><div class="avatar" aria-hidden="true">ΕΚ</div><div><div class="person-name">Ελευθέριος Κοπάσης</div><div class="person-role">Μέλος &amp; Διαχειριστής</div></div></div>
+        <div class="person"><div class="avatar" aria-hidden="true">ΙΠ</div><div><div class="person-name">Ιωάννα Παπαδοπέτρου</div><div class="person-role">Εταίρος – Μέλος</div></div></div>
+      </div>
+    </section>
+    <footer><span>© 2026 ΤΕΡΨΙΣ Ι.Κ.Ε.</span><span>Εταιρικά &amp; νομικά στοιχεία</span></footer>
+  </main>
 </body>
 </html>
-
